@@ -12,7 +12,7 @@
  
 
 
-const socket = io("http://localhost:3000");
+const socket = io("");
 
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp');

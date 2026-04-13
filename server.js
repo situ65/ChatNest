@@ -35,7 +35,7 @@ io.on("connection", (socket) => {
     });
 
     socket.on("send", (message) => {
-        socket.broadcast.emit("receive", {
+        io.emit("receive", {
             message: message,
             name: users[socket.id]
         });
