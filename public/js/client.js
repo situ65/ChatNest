@@ -12,7 +12,7 @@
  
 
 
-const socket = io("");
+const socket = io();
 
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp');
@@ -48,6 +48,7 @@ form.addEventListener('submit', (e) => {
     messageInput.value = '';
 });
 
+messageContainer.scrollTop = messageContainer.scrollHeight;
 // username
 let name = prompt("Enter your name to join");
 if (!name) name = "Anonymous";
